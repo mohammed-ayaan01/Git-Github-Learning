@@ -3,8 +3,8 @@
 This repository is a personal log of everything I'm learning about Git and GitHub — commands, concepts, mistakes, and the "aha" moments along the way.
 
 ![Git](https://img.shields.io/badge/Git-Learning-orange?logo=git)
-![Status](https://img.shields.io/badge/status-in%20progress-yellow)
-![Last Commit](https://img.shields.io/github/last-commit/mohammed-ayaan01/Git-Github-Learning)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Last Commit](https://img.shields.io/github/last-commit/mohammed-ayaan01/Git-Github-Learning?label=Last%20Commit)
 
 ## 📌 Why this repo exists
 
