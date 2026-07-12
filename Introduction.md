@@ -29,41 +29,58 @@
 ## Initial Set up
 
 --> Check if Git is already installed:
-    $ git --version
+```
+git --version
+```
 
 --> Installation:
 
-    Windows:
-        - Download from https://git-scm.com/download/win
-        - Run installer (default options are fine for beginners)
-        - Verify with: git --version (in Git Bash or CMD)
+**Windows:**
+- Download from https://git-scm.com/download/win
+- Run installer (default options are fine for beginners)
+- Verify with: `git --version` (in Git Bash or CMD)
 
-    macOS: (reference only — I use Windows/Linux, verified via official docs)
-        - Option 1: Install via Homebrew
-            $ brew install git
-        - Option 2: Install Xcode Command Line Tools (includes Git)
-            $ xcode-select --install
-        - Option 3: Download installer from https://git-scm.com/download/mac
+**macOS:** (reference only — I use Windows/Linux, verified via official docs)
+- Option 1: Install via Homebrew
+```
+brew install git
+```
+- Option 2: Install Xcode Command Line Tools (includes Git)
+```
+xcode-select --install
+```
+- Option 3: Download installer from https://git-scm.com/download/mac
 
-    Linux (Debian/Ubuntu):
-        $ sudo apt update
-        $ sudo apt install git
+**Linux (Debian/Ubuntu):**
+```
+sudo apt update
+sudo apt install git
+```
 
-    Linux (Fedora/RHEL):
-        $ sudo dnf install git
+**Linux (Fedora/RHEL):**
+```
+sudo dnf install git
+```
 
 --> First-time Configuration (do this once per machine):
-    $ git config --global user.name "Your Name"
-    $ git config --global user.email "your_email@example.com"
-
-    - This info gets attached to every commit you make
-    - Applies to ALL repos on this machine, not just one
+```
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+```
+- This info gets attached to every commit you make
+- Applies to ALL repos on this machine, not just one
 
 --> Check your config anytime:
-    $ git config --global --list
+```
+git config --global --list
+```
 
 --> (Optional) Set default branch name to 'main':
-    $ git config --global init.defaultBranch main
+```
+git config --global init.defaultBranch main
+```
 
 --> (Optional) Set default editor for commit messages:
-    $ git config --global core.editor "code --wait"   # if using VS Code
+```
+git config --global core.editor "code --wait"   # if using VS Code
+```
