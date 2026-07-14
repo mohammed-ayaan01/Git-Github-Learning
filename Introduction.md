@@ -6,6 +6,17 @@
 --> RoleBack to previously working state
 --> To Control Version and reduce space
 
+## Git vs GitHub
+
+Git:
+- Version control system.
+- Works offline.
+- Tracks changes locally.
+
+GitHub:
+- Cloud platform for hosting Git repositories.
+- Used for collaboration and showcasing projects.
+
 ## History of Version Control Systems
 
 1. Local Version Control Systems:
