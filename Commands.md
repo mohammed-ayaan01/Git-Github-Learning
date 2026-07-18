@@ -32,6 +32,11 @@ ls
 ```
 >List the files and directories.
 
+```
+rm -rf .git
+```
+>To delete .git folder
+
 --- 
 ## 📦 Tracking a Project in Git
 I track my project and get it ready to push in my git repository
@@ -56,7 +61,7 @@ git add .
 >Stages all changes in the current working directory.
 
 ```
-git commit -m "<Messege Committed>"
+git commit -m "<Commit Message>"
 ```
 >Commit the changes from staging area to the git repository.
 
@@ -99,6 +104,55 @@ touch .gitkeep
 >Used to track Empty Directories.
 
 --- 
+## 🔍 Changes between Commits and Staging Area
+After Staging,Modifying the repository will show it as `not staged` although git `status` is used to compare
+```
+git diff
+```
+>It compares current working directory and staging area.
+
+```
+git diff --staged
+```
+>Compares the previous commit and staged area.
+
+>For example:
+```
+-Hello guys(removed)
++Hello guys i am Ayaan(Added)
+```
+---
+## ⚡ Skipping Staging Area
+To skip staging area and directly commit
+
+```
+git commit -a -m "<Direct Commit>"
+```
+>It adds and commits directly.
+
+>Untracked files(new files/folders that haven't been staged) are not committed
+
+>Does not add new files.
+
+---
+## 🔀 Moving and Renaming Files
+Untracking a file by moving it or deleting it and Renaming the file without changing to the Desktop 
+
+```
+git rm --cached <File name>
+```
+>Untracks the File.
+
+>Add the file in .gitignore and untracking it,since git has internally tracked the file or folder before.
+
+```
+git mv <old File name> <Current File name>
+```
+>renames the file and also stages it.
+
+>Can be Checked through `git status`.
+
+---
 
 
 
