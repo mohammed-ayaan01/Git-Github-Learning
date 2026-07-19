@@ -96,6 +96,35 @@ touch .gitignore
 
 >A Blank Folder is ignored and if it contains a ignored file,it ignores the whole folder.
 
+**Wildcards in .gitignore**
+>.gitignore supports pattern matching, so you don't have to list every file individually.
+ 
+```
+*.log
+```
+>Ignores every file ending in `.log`, no matter where it is in the project.
+ 
+```
+*.txt
+!important.txt
+```
+>Ignores all `.txt` files, except `important.txt` — the `!` un-ignores a specific match.
+ 
+```
+build/
+```
+>Ignores an entire folder named `build`, wherever it appears.
+ 
+```
+/dist
+```
+>The leading `/` restricts this to only the `dist` folder at the project root, not any `dist` folder nested deeper in the project.
+ 
+```
+temp?.txt
+```
+>The `?` matches exactly one character — this ignores `temp1.txt`, `tempA.txt`, but not `temp10.txt`.
+
 ```
 touch .gitkeep
 ```
