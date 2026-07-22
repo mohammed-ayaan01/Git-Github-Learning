@@ -1,152 +1,152 @@
 
 ## 🖥️ Basic Commands in Git
-A few basic terminal commands i personally use in git bash for navigating folders and files of my project
+A few basic terminal commands I personally use in Git Bash for navigating folders and files of my project
 
-```
+```bash
 pwd
 ```
->It displays the present working directory.
+> It displays the present working directory.
 
-```
+```bash
 cd 
 ```
->Changes to the home directory.
+> Changes to the home directory.
 
-```
+```bash
 cd <Folder Name>
 ```
->Changes to a specified directory.
+> Changes to a specified directory.
 
-```
+```bash
 mkdir <Folder name>
 ```
->Creates a new directory with a name.
+> Creates a new directory with a name.
 
-```
+```bash
 touch <File>
 ```
->Creates a new file with its extension.
+> Creates a new file with its extension.
 
-```
+```bash
 ls 
 ```
->List the files and directories.
+> List the files and directories.
 
-```
+```bash
 rm -rf .git
 ```
->To delete .git folder
+> To delete .git folder
 
 --- 
 ## 📦 Tracking a Project in Git
-I track my project and get it ready to push in my git repository
-```
+I track my project and get it ready to push in my GitHub repository
+```bash
 git status
 ```
->To check the changes tracked,modified,staged and untracked files.
+> To check the changes tracked,modified,staged and untracked files.
 
-```
+```bash
 git init
 ```
->Initializes a new git repository.
+> Initializes a new git repository.
 
-```
+```bash
 git add -A 
 ```
->Stages all changes including deleted files.
+> Stages all changes including deleted files.
 
-```
+```bash
 git add .
 ```
->Stages all changes in the current working directory.
+> Stages all changes in the current working directory.
 
-```
+```bash
 git commit -m "<Commit Message>"
 ```
->Commit the changes from staging area to the git repository.
+> Commit the changes from staging area to the git repository.
 
 --- 
 
 ## 🌐 Cloning a Remote Git Repository
 I clone repositories and enhance them or find issues
 
-```
+```bash
 git clone <Link> 
 ```
->Clones a remote git repository.
+> Clones a remote git repository.
 
-```
+```bash
 git clone <Link> <name>
 ```
->Clones a remote git repository to a desired name.
+> Clones a remote git repository to a desired name.
 
 --- 
 
 ## 🚫 .gitignore and .gitkeep
-Ignoring a git folder 
+Ignoring a git folder / file 
 
-```
+```bash
 touch .gitignore
 ```
->Creates a .gitignore file where other files and folders can be ignored and not tracked.
+> Creates a .gitignore file where other files and folders can be ignored and not tracked.
 
 
 **Note**
->A .gitignore file can also ignore a file inside a folder.
+> A .gitignore file can also ignore a file inside a folder.
 
->A Blank Folder is ignored and if it contains a ignored file,it ignores the whole folder.
+> Git does not track empty directories. If a directory contains only ignored files, Git will ignore the entire directory.
 
 **Wildcards in .gitignore**
->.gitignore supports pattern matching, so you don't have to list every file individually.
+> .gitignore supports pattern matching, so you don't have to list every file individually.
  
 ```
 *.log
 ```
->Ignores every file ending in `.log`, no matter where it is in the project.
+> Ignores every file ending in `.log`, no matter where it is in the project.
  
 ```
 *.txt
 !important.txt
 ```
->Ignores all `.txt` files, except `important.txt` — the `!` un-ignores a specific match.
+> Ignores all `.txt` files, except `important.txt` — the `!` un-ignores a specific match.
  
 ```
 build/
 ```
->Ignores an entire folder named `build`, wherever it appears.
+> Ignores an entire folder named `build`, wherever it appears.
  
 ```
 /dist
 ```
->The leading `/` restricts this to only the `dist` folder at the project root, not any `dist` folder nested deeper in the project.
+> The leading `/` restricts this to only the `dist` folder at the project root, not any `dist` folder nested deeper in the project.
  
 ```
 temp?.txt
 ```
->The `?` matches exactly one character — this ignores `temp1.txt`, `tempA.txt`, but not `temp10.txt`.
+> The `?` matches exactly one character — this ignores `temp1.txt`, `tempA.txt`, but not `temp10.txt`.
 
-```
+```bash
 touch .gitkeep
 ```
->A .gitkeep file tracks the folder which wants to be tracked.
+> A .gitkeep file is used to keep an otherwise empty directory tracked by Git.
 
->Used to track Empty Directories.
+> Used to track Empty Directories.
 
 --- 
 ## 🔍 Changes between Commits and Staging Area
 After Staging,Modifying the repository will show it as `not staged` although git `status` is used to compare
-```
+```bash
 git diff
 ```
->It compares current working directory and staging area.
+> It compares current working directory and staging area.
 
-```
+```bash
 git diff --staged
 ```
->Compares the previous commit and staged area.
+> Compares the previous commit and staged area.
 
->For example:
-```
+> For example:
+```diff
 -Hello guys(removed)
 +Hello guys i am Ayaan(Added)
 ```
@@ -154,85 +154,85 @@ git diff --staged
 ## ⚡ Skipping Staging Area
 To skip staging area and directly commit
 
-```
+```bash
 git commit -a -m "<Direct Commit>"
 ```
->It adds and commits directly.
+> It adds and commits directly.
 
->Untracked files(new files/folders that haven't been staged) are not committed
+> Untracked files(new files/folders that haven't been staged) are not committed
 
->Does not add new files.
+> Does not add new files.
 
 ---
 ## 🔀 Moving and Renaming Files
 Untracking a file by moving it or deleting it and Renaming the file without changing to the Desktop 
 
-```
+```bash
 git rm --cached <File name>
 ```
->Untracks the File.
+> Untracks the File.
 
->Add the file in .gitignore and untracking it,since git has internally tracked the file or folder before.
+> Add the file in .gitignore and untracking it,since git has internally tracked the file or folder before.
 
-```
+```bash
 git mv <old File name> <Current File name>
 ```
->renames the file and also stages it.
+> Renames the file and also stages it.
 
->Can be Checked through `git status`.
+> Can be Checked through `git status`.
 
 ---
 
 ## 📜 View and Change Commits
-Viewing at the history of commits and changing user-defined commits
+Viewing at the history of commits and changing user-defined commit messages
 
 ```bash
 git log -p
 ```
->Shows the differences of each commit as history.
+> Shows the differences of each commit as history.
 ```bash
-git log -p -n
+git log -p <number>
 ```
->Shows recent commit up till specified number n.
+> Shows recent commit up till specified number.
 
 ```bash
 git log --stat
 ```
->Shows changes in a brief manner, including insertions and deletions.
+> Shows changes in a brief manner, including insertions and deletions.
 
 ```bash
 git log --pretty=oneline
 ```
->Displays each commit on a single line.
+> Displays each commit on a single line.
 
 ```bash
 git log --pretty=short
 ```
->Displays a short commit log, including author and commit message.
+> Displays a short commit log, including author and commit message.
 
 ```bash
 git log --pretty=full
 ```
->Displays full author and commit message.
+> Displays full author and commit message.
 
 ```bash
 git log --since="2026-05-01" (or) git log --since="2 days ago"
 ```
->Shows commits made with in specified duration.
+> Shows commits made with in specified duration.
 
 ```bash
 git log --pretty=format:"%h -- %an"
 ```
->Shows hash and Author name in a log.
+> Shows hash and Author name in a log.
 
 **NOTE**
->These options of format can be different and can be learned from documentation itself i.e,
+> These options of format can be different and can be learned from documentation itself i.e,
 https://git-scm.com/docs/pretty-formats.
 
 ```bash
 git commit --amend
 ```
->Used to modify the most recent commit message or include more changes in the last commit.
+> Used to modify the most recent commit message or include more changes in the last commit.
 
 ---
 
@@ -241,23 +241,23 @@ git commit --amend
 ```bash
 git restore --staged <filename>
 ```
->To unstage a staged file/folder.
+> To unstage a staged file/folder.
 
 ```bash 
 git checkout -- <filename>
 ```
->Revert the changes of the file/folder into previous working committed state.
+> Revert the changes of the file/folder into previous working committed state.
 
 ```bash
 git checkout -f
 ```
->Reverts all the changes into previous working committed state.
+> Reverts all the changes into previous working committed state.
 
 > ⚠️ Be careful before using this command. It permanently discards your local changes.
 
 ---
 
-# 🌐 Working With Remote Repository
+## 🌐 Working With Remote Repository
 
 ```bash
 git remote add origin git@github.com:<GitHub-Username>/<repository-name>.git
