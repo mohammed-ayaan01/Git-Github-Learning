@@ -183,6 +183,113 @@ git mv <old File name> <Current File name>
 
 ---
 
+## 📜 View and Change Commits
+Viewing at the history of commits and changing user-defined commits
+
+```bash
+git log -p
+```
+>Shows the differences of each commit as history.
+```bash
+git log -p -n
+```
+>Shows recent commit up till specified number n.
+
+```bash
+git log --stat
+```
+>Shows changes in a brief manner, including insertions and deletions.
+
+```bash
+git log --pretty=oneline
+```
+>Displays each commit on a single line.
+
+```bash
+git log --pretty=short
+```
+>Displays a short commit log, including author and commit message.
+
+```bash
+git log --pretty=full
+```
+>Displays full author and commit message.
+
+```bash
+git log --since="2026-05-01" (or) git log --since="2 days ago"
+```
+>Shows commits made with in specified duration.
+
+```bash
+git log --pretty=format:"%h -- %an"
+```
+>Shows hash and Author name in a log.
+
+**NOTE**
+>These options of format can be different and can be learned from documentation itself i.e,
+https://git-scm.com/docs/pretty-formats.
+
+```bash
+git commit --amend
+```
+>Used to modify the most recent commit message or include more changes in the last commit.
+
+---
+
+## ↩️ Unstaging and Unmodifying/Restoring
+
+```bash
+git restore --staged <filename>
+```
+>To unstage a staged file/folder.
+
+```bash 
+git checkout -- <filename>
+```
+>Revert the changes of the file/folder into previous working committed state.
+
+```bash
+git checkout -f
+```
+>Reverts all the changes into previous working committed state.
+
+> ⚠️ Be careful before using this command. It permanently discards your local changes.
+
+---
+
+# 🌐 Working With Remote Repository
+
+```bash
+git remote add origin git@github.com:<GitHub-Username>/<repository-name>.git
+```
+> Adds a remote repository named `origin` to your local Git repository.
+
+```bash
+git remote
+```
+> Lists all the remote repositories associated with the current Git repository.
+
+```bash
+git push -u origin master
+```
+> Pushes the committed changes to the `master` branch of the remote repository and sets it as the default upstream branch.
+
+> ⚠️ If your default branch is `main`, use:
+
+```bash
+git push -u origin main
+```
+
+> 🔐 For private repositories, authentication is required.
+
+> We use SSH keys (or a Personal Access Token when using HTTPS) to authenticate with GitHub.
+
+**📚 Refer to the GitHub documentation for setting up SSH keys.**
+
+---
+
+
+
 
 
 
