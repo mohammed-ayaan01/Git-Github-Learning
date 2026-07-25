@@ -288,6 +288,25 @@ git push -u origin main
 
 ---
 
+## 🔀 Alias Commands
+An alias is just a custom name that maps to a full Git command.
+
+```bash
+git config --global alias.<shortcut-name> '<git-command>'
+```
+> Creates an alias called `st` for the `status` command.
+
+> For a single word like `status`, quotes are optional.
+
+**Example**
+
+```bash
+git config --global alias.<shortcut-name> 'restore --staged --'
+```
+> Creates an alias called `unstage` for `restore --staged --`.
+
+---
+
 
 
 
