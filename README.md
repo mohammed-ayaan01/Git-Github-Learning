@@ -35,12 +35,22 @@ git-learnings/
     ├── View and Change Commits
     ├── Unstaging and Unmodifying
     ├── Remote Repositories
-    └── Alias Commands
-├── 04-Future-Topics.md
-    └── SSH Keys
-├── 05-remote-and-github.md        # remotes, push, pull, SSH setup
-├── 06-mistakes-i-made.md          # errors I hit and how I fixed them
-└── 07-cheatsheet.md               # quick command reference
+    ├── Alias Commands
+    └── Git Tags
+├── 04-Branch.md
+    ├── Branching
+    ├── Merging
+    └── Merge Conflicts
+├── 05-Stashing.md        
+├── 06-Rebase.md
+├── 07-Github.md
+    ├── Markdown files 
+    ├── SSH Keys
+    ├── Fork Vs Clone
+    ├── Conventional Commits
+    └── Git Fetch and Git Pull
+├── 08-Multi-User-Workflow.md
+└── 09-CheatSheet.html
 ```
 
 ## 🧠 Key concepts I want to remember
