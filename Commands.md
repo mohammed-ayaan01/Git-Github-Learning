@@ -307,6 +307,27 @@ git config --global alias.<shortcut-name> 'restore --staged --'
 
 ---
 
+## 🏷️ Git Tags
+
+**Annotated Tag**
+```bash
+git tag -a v1.0 -m "My Release 1"
+```
+> Used to give a message to your commit,creates a annotated tag object metadata such as tagger,date and message.
+
+**LightWeight Tag**
+```bash
+git tag v1.1
+```
+> Directly tag a commit as a simple reference.
+
+```bash
+git tag
+```
+> Used to list all the tags.
+
+---
+
 
 
 
